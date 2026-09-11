@@ -20,9 +20,27 @@ const CONFIG = {
   // Use apenas números reais
   // =====================================================
 
-  currentMembers: 842,
+  // =====================================================
+// OCUPAÇÃO VISUAL DO GRUPO
+// Use uma porcentagem coerente com a ocupação real
+// =====================================================
 
-  maxMembers: 1024,
+occupancyPercentage: 87,
+
+enableScarcityBar: true,
+
+scarcityMessages: {
+
+  normal:
+    "O grupo está recebendo novas pessoas agora.",
+
+  high:
+    "O grupo está ficando cheio. Entre antes de perder os próximos achadinhos.",
+
+  critical:
+    "Quase cheio. Garanta sua entrada enquanto o grupo ainda está aberto."
+
+},
 
 
   // =====================================================
