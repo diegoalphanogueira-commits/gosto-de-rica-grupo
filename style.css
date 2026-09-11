@@ -56,45 +56,87 @@ select {
 
 :root {
 
-  --green-950: #16382a;
-  --green-900: #1d4936;
-  --green-800: #275b44;
-  --green-700: #327052;
-  --green-600: #448564;
+  /* ======================================================
+     LARANJA GOSTO DE RICA
+  ====================================================== */
+
+  --green-950: #6b2500;
+  --green-900: #8f3100;
+  --green-800: #b64000;
+  --green-700: #e65300;
+  --green-600: #ff6a00;
+
+  --orange-950: #642300;
+  --orange-900: #8e3000;
+  --orange-800: #ba4100;
+  --orange-700: #e65300;
+  --orange-600: #ff6a00;
+  --orange-500: #ff7a1a;
+  --orange-400: #ff9a4d;
+
+  /* ======================================================
+     FUNDOS
+  ====================================================== */
 
   --beige-50: #fffdf9;
-  --beige-100: #fbf6ee;
-  --beige-200: #f4eadc;
-  --beige-300: #eadbc7;
+  --beige-100: #fff8ef;
+  --beige-200: #ffecda;
+  --beige-300: #ffdcc0;
 
-  --brown-900: #3d2f28;
-  --brown-700: #6c584c;
-  --brown-500: #927a69;
+  /* ======================================================
+     MARRONS
+  ====================================================== */
 
-  --pink-100: #f9e9e6;
-  --pink-200: #f2d8d4;
+  --brown-900: #321d14;
+  --brown-700: #65463a;
+  --brown-500: #97756a;
 
-  --gold-500: #caa867;
-  --gold-400: #d8bd87;
-  --gold-300: #ead6ae;
+  /* ======================================================
+     COMPLEMENTARES
+  ====================================================== */
+
+  --pink-100: #fff0e7;
+  --pink-200: #ffe1d0;
+
+  --gold-500: #cf9b4c;
+  --gold-400: #deb46e;
+  --gold-300: #f0d39d;
 
   --white: #ffffff;
 
-  --text-primary: #2e2925;
-  --text-secondary: #6f655e;
-  --text-muted: #91867e;
+  /* ======================================================
+     TEXTOS
+  ====================================================== */
 
-  --border-soft: rgba(79, 65, 54, 0.09);
-  --border-green: rgba(39, 91, 68, 0.15);
+  --text-primary: #33261f;
+  --text-secondary: #735f54;
+  --text-muted: #9b8a80;
+
+  /* ======================================================
+     BORDAS
+  ====================================================== */
+
+  --border-soft:
+    rgba(93, 54, 32, 0.09);
+
+  --border-green:
+    rgba(255, 106, 0, 0.18);
+
+  /* ======================================================
+     SOMBRAS
+  ====================================================== */
 
   --shadow-sm:
-    0 8px 30px rgba(47, 38, 31, 0.06);
+    0 8px 30px
+    rgba(72, 37, 18, 0.06);
 
   --shadow-md:
-    0 18px 55px rgba(47, 38, 31, 0.09);
+    0 18px 55px
+    rgba(95, 45, 15, 0.10);
 
   --shadow-lg:
-    0 28px 90px rgba(32, 58, 44, 0.15);
+    0 28px 90px
+    rgba(123, 47, 0, 0.18);
 
   --radius-sm: 14px;
   --radius-md: 22px;
@@ -116,7 +158,6 @@ select {
     Georgia,
     serif;
 }
-
 
 /* =========================================================
    BASE
@@ -1911,6 +1952,762 @@ a:focus-visible {
 
     transition-duration:
       0.01ms !important;
+  }
+
+}
+/* =========================================================
+   GOSTO DE RICA
+   ORANGE PREMIUM OVERRIDES
+========================================================= */
+
+
+/* =========================================================
+   FUNDO
+========================================================= */
+
+body {
+
+  background:
+
+    radial-gradient(
+      circle at 90% 0%,
+      rgba(255, 153, 77, 0.12),
+      transparent 34%
+    ),
+
+    radial-gradient(
+      circle at 0% 38%,
+      rgba(255, 209, 168, 0.18),
+      transparent 36%
+    ),
+
+    linear-gradient(
+      180deg,
+      #fffdf9 0%,
+      #fff8f1 48%,
+      #fffdf9 100%
+    );
+
+}
+
+
+/* =========================================================
+   ORBS
+========================================================= */
+
+.background-orb-one {
+
+  background:
+    rgba(
+      255,
+      106,
+      0,
+      0.42
+    );
+
+}
+
+.background-orb-two {
+
+  background:
+    rgba(
+      255,
+      183,
+      122,
+      0.30
+    );
+
+}
+
+
+/* =========================================================
+   BADGE HERO
+========================================================= */
+
+.hero-badge {
+
+  color:
+    var(--orange-800);
+
+  border-color:
+    rgba(
+      255,
+      106,
+      0,
+      0.18
+    );
+
+  background:
+    rgba(
+      255,
+      250,
+      245,
+      0.90
+    );
+
+}
+
+.hero-badge-dot {
+
+  background:
+    var(--orange-600);
+
+}
+
+.hero-badge-dot::after {
+
+  border-color:
+    rgba(
+      255,
+      106,
+      0,
+      0.35
+    );
+
+}
+
+
+/* =========================================================
+   HEADLINE
+========================================================= */
+
+.hero-title span {
+
+  color:
+    var(--orange-600);
+
+}
+
+.hero-title span::after {
+
+  background:
+
+    linear-gradient(
+      90deg,
+
+      rgba(
+        255,
+        106,
+        0,
+        0.08
+      ),
+
+      rgba(
+        255,
+        106,
+        0,
+        0.30
+      )
+
+    );
+
+}
+
+
+/* =========================================================
+   BOTÕES PRINCIPAIS
+========================================================= */
+
+.cta-button {
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #ff7a18 0%,
+      #ff5a00 52%,
+      #d94800 100%
+    );
+
+  box-shadow:
+
+    0 18px 42px
+    rgba(
+      222,
+      75,
+      0,
+      0.27
+    );
+
+}
+
+.cta-button:hover {
+
+  box-shadow:
+
+    0 25px 58px
+    rgba(
+      222,
+      75,
+      0,
+      0.36
+    );
+
+}
+
+
+/* =========================================================
+   SCARCITY CARD
+========================================================= */
+
+.scarcity-card {
+
+  position: relative;
+
+  overflow: hidden;
+
+  border:
+
+    1px solid
+    rgba(
+      255,
+      106,
+      0,
+      0.18
+    );
+
+  background:
+
+    linear-gradient(
+      135deg,
+
+      rgba(
+        255,
+        255,
+        255,
+        0.98
+      ),
+
+      rgba(
+        255,
+        244,
+        233,
+        0.95
+      )
+
+    );
+
+  box-shadow:
+
+    0 20px 60px
+    rgba(
+      142,
+      48,
+      0,
+      0.10
+    );
+
+}
+
+
+.scarcity-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  top: -150px;
+  right: -110px;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  background:
+
+    radial-gradient(
+      circle,
+
+      rgba(
+        255,
+        106,
+        0,
+        0.18
+      ),
+
+      transparent 70%
+    );
+
+}
+
+
+.scarcity-icon {
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #fff1e4,
+      #ffd8bb
+    );
+
+}
+
+
+/* =========================================================
+   PORCENTAGEM
+========================================================= */
+
+.occupancy-header strong {
+
+  font-size: 18px;
+
+  color:
+    var(--orange-600);
+
+}
+
+
+/* =========================================================
+   TRACK
+========================================================= */
+
+.occupancy-track {
+
+  height: 13px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background:
+    #f0dfd3;
+
+  box-shadow:
+
+    inset
+    0 2px 5px
+    rgba(
+      88,
+      45,
+      22,
+      0.07
+    );
+
+}
+
+
+/* =========================================================
+   BARRA LARANJA
+========================================================= */
+
+.occupancy-progress {
+
+  position: relative;
+
+  width: 0%;
+  height: 100%;
+
+  overflow: hidden;
+
+  border-radius: inherit;
+
+  background:
+
+    linear-gradient(
+      90deg,
+
+      #ff8a30 0%,
+
+      #ff6a00 45%,
+
+      #e94e00 100%
+    );
+
+  box-shadow:
+
+    0 0 18px
+    rgba(
+      255,
+      106,
+      0,
+      0.30
+    );
+
+}
+
+
+/* =========================================================
+   BRILHO VIVO DA BARRA
+========================================================= */
+
+.occupancy-progress::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: -45%;
+
+  width: 38%;
+
+  border-radius: 999px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+
+      transparent,
+
+      rgba(
+        255,
+        255,
+        255,
+        0.20
+      ),
+
+      rgba(
+        255,
+        255,
+        255,
+        0.85
+      ),
+
+      rgba(
+        255,
+        255,
+        255,
+        0.20
+      ),
+
+      transparent
+    );
+
+  transform:
+    skewX(-18deg);
+
+}
+
+
+.occupancy-progress.is-active::after {
+
+  animation:
+
+    occupancyShine
+    2.2s
+    ease-in-out
+    infinite;
+
+}
+
+
+@keyframes occupancyShine {
+
+  0% {
+
+    left: -45%;
+
+  }
+
+  55% {
+
+    left: 115%;
+
+  }
+
+  100% {
+
+    left: 115%;
+
+  }
+
+}
+
+
+/* =========================================================
+   PULSO MUITO SUTIL
+========================================================= */
+
+.occupancy-progress.is-active {
+
+  animation:
+
+    occupancyPulse
+    2.8s
+    ease-in-out
+    infinite;
+
+}
+
+
+@keyframes occupancyPulse {
+
+  0%,
+  100% {
+
+    filter:
+      brightness(1);
+
+  }
+
+  50% {
+
+    filter:
+      brightness(1.08);
+
+  }
+
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.benefit-card {
+
+  background:
+
+    linear-gradient(
+      145deg,
+
+      rgba(
+        255,
+        255,
+        255,
+        0.95
+      ),
+
+      rgba(
+        255,
+        248,
+        240,
+        0.92
+      )
+
+    );
+
+}
+
+.benefit-card:hover {
+
+  border-color:
+
+    rgba(
+      255,
+      106,
+      0,
+      0.20
+    );
+
+}
+
+
+/* =========================================================
+   ÍCONES BENEFÍCIOS
+========================================================= */
+
+.benefit-icon {
+
+  background:
+
+    linear-gradient(
+      145deg,
+      #fff4e8,
+      #ffe2ca
+    );
+
+}
+
+
+/* =========================================================
+   BLOCO ESCURO
+========================================================= */
+
+.experience-card {
+
+  background:
+
+    linear-gradient(
+      145deg,
+      #662300 0%,
+      #9a3300 52%,
+      #c84500 100%
+    );
+
+  box-shadow:
+
+    0 30px 90px
+    rgba(
+      122,
+      42,
+      0,
+      0.24
+    );
+
+}
+
+
+.experience-card::before {
+
+  background:
+
+    rgba(
+      255,
+      184,
+      119,
+      0.13
+    );
+
+}
+
+
+/* =========================================================
+   CHECKS
+========================================================= */
+
+.experience-list li span {
+
+  color:
+    #873100;
+
+  background:
+    #ffd5ad;
+
+}
+
+
+/* =========================================================
+   PHONE AVATAR
+========================================================= */
+
+.phone-avatar {
+
+  color:
+    #fff4e7;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #ff6a00,
+      #b93c00
+    );
+
+}
+
+
+/* =========================================================
+   CTA FINAL
+========================================================= */
+
+.final-cta-card {
+
+  border-color:
+
+    rgba(
+      255,
+      106,
+      0,
+      0.16
+    );
+
+  background:
+
+    radial-gradient(
+      circle at 50% -5%,
+
+      rgba(
+        255,
+        172,
+        102,
+        0.25
+      ),
+
+      transparent 45%
+    ),
+
+    #ffffff;
+
+}
+
+
+.final-cta-card h2 span {
+
+  color:
+    var(--orange-600);
+
+}
+
+
+/* =========================================================
+   CTA FLUTUANTE
+========================================================= */
+
+.floating-cta-button {
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #ff720f,
+      #e84d00
+    );
+
+  box-shadow:
+
+    0 16px 42px
+    rgba(
+      194,
+      60,
+      0,
+      0.34
+    );
+
+}
+
+
+/* =========================================================
+   EYEBROWS
+========================================================= */
+
+.section-eyebrow {
+
+  color:
+    var(--orange-600);
+
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.footer-link {
+
+  color:
+    var(--orange-600);
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+  max-width: 640px
+) {
+
+  .occupancy-track {
+
+    height: 12px;
+
+  }
+
+  .occupancy-header strong {
+
+    font-size: 17px;
+
   }
 
 }
