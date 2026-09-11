@@ -2711,3 +2711,276 @@ body {
   }
 
 }
+/* =========================================================
+   LANDING COMPACTA
+========================================================= */
+
+.hero-compact {
+
+  padding-bottom: 38px;
+
+}
+
+
+.hero-compact .hero-container {
+
+  max-width: 760px;
+
+}
+
+
+.hero-compact .hero-title {
+
+  max-width: 720px;
+
+}
+
+
+.hero-compact .hero-description {
+
+  max-width: 580px;
+
+}
+
+
+.compact-benefits {
+
+  padding:
+    42px
+    0
+    48px;
+
+}
+
+
+.compact-benefits .benefits-grid {
+
+  max-width: 960px;
+
+  margin-inline: auto;
+
+}
+
+
+.compact-benefits .benefit-card {
+
+  padding:
+    24px
+    22px;
+
+}
+
+
+.compact-benefits .benefit-icon {
+
+  margin-bottom: 15px;
+
+}
+
+
+.compact-benefits .benefit-card h3 {
+
+  font-size: 20px;
+
+}
+
+
+.compact-final-section {
+
+  padding:
+    0
+    0
+    50px;
+
+}
+
+
+.compact-final-card {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  max-width: 900px;
+
+  margin-inline: auto;
+
+  padding:
+    24px
+    28px;
+
+  border:
+    1px solid
+    rgba(255, 106, 0, 0.14);
+
+  border-radius: 22px;
+
+  background:
+    rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 15px 40px
+    rgba(103, 49, 17, 0.08);
+
+}
+
+
+.compact-final-copy {
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.compact-final-copy strong {
+
+  font-family:
+    var(--font-display);
+
+  font-size: 21px;
+
+  color:
+    var(--brown-900);
+
+}
+
+
+.compact-final-copy span {
+
+  margin-top: 2px;
+
+  font-size: 13px;
+
+  color:
+    var(--text-secondary);
+
+}
+
+
+.compact-final-button {
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+
+  flex-shrink: 0;
+
+  min-height: 52px;
+
+  padding:
+    10px
+    22px;
+
+  border-radius: 14px;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  color: #ffffff;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #ff7515,
+      #e94f00
+    );
+
+  box-shadow:
+
+    0 12px 28px
+    rgba(220, 73, 0, 0.22);
+
+}
+
+
+.compact-final-button span {
+
+  font-size: 18px;
+
+}
+
+
+.compact-footer {
+
+  padding:
+    25px
+    0
+    100px;
+
+}
+
+
+@media (
+  max-width: 640px
+) {
+
+  .hero-compact {
+
+    padding-bottom: 30px;
+
+  }
+
+
+  .compact-benefits {
+
+    padding:
+      30px
+      0
+      35px;
+
+  }
+
+
+  .compact-benefits .benefit-card {
+
+    padding:
+      20px;
+
+  }
+
+
+  .compact-final-section {
+
+    padding-bottom: 35px;
+
+  }
+
+
+  .compact-final-card {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 16px;
+
+    padding:
+      20px;
+
+    text-align: center;
+
+  }
+
+
+  .compact-final-copy strong {
+
+    font-size: 19px;
+
+  }
+
+
+  .compact-final-button {
+
+    width: 100%;
+
+  }
+
+}
