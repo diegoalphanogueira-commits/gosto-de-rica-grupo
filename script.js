@@ -341,11 +341,14 @@ function trackCustomMetaEvent(
    BARRA DE OCUPAÇÃO
 ========================================================= */
 
+/* =========================================================
+   BARRA DE OCUPAÇÃO
+========================================================= */
+
 function setupScarcityBar() {
 
   const scarcitySection =
     document.getElementById("vagas");
-
 
   if (
     !CONFIG?.enableScarcityBar
@@ -360,41 +363,13 @@ function setupScarcityBar() {
   }
 
 
-  const currentMembers =
-    Number(
-      safeConfigValue(
-        CONFIG.currentMembers,
-        0
-      )
-    );
-
-
-  const maxMembers =
-    Number(
-      safeConfigValue(
-        CONFIG.maxMembers,
-        1
-      )
-    );
-
-
-  if (
-    maxMembers <= 0
-  ) {
-    return;
-  }
-
-
-  const percentage =
+  const targetPercentage =
     Math.min(
-      100,
+      99,
       Math.max(
         0,
-        Math.round(
-          (
-            currentMembers /
-            maxMembers
-          ) * 100
+        Number(
+          CONFIG?.occupancyPercentage || 0
         )
       )
     );
@@ -424,41 +399,21 @@ function setupScarcityBar() {
     );
 
 
-  if (percentageElement) {
-
-    percentageElement.textContent =
-      `${percentage}%`;
-
-  }
-
-
-  if (progressElement) {
-
-    requestAnimationFrame(() => {
-
-      setTimeout(() => {
-
-        progressElement.style.width =
-          `${percentage}%`;
-
-      }, 250);
-
-    });
-
-  }
-
+  /* ==========================================
+     TEXTO
+  ========================================== */
 
   if (textElement) {
 
     textElement.textContent =
-      `${currentMembers.toLocaleString(
-        "pt-BR"
-      )} de ${maxMembers.toLocaleString(
-        "pt-BR"
-      )} vagas ocupadas`;
+      "Novas pessoas estão entrando no grupo.";
 
   }
 
+
+  /* ==========================================
+     MENSAGEM DINÂMICA
+  ========================================== */
 
   if (titleElement) {
 
@@ -466,14 +421,13 @@ function setupScarcityBar() {
       CONFIG?.scarcityMessages?.normal;
 
 
-    if (percentage >= 90) {
+    if (targetPercentage >= 90) {
 
       message =
-        CONFIG?.scarcityMessages
-          ?.critical;
+        CONFIG?.scarcityMessages?.critical;
 
     } else if (
-      percentage >= 80
+      targetPercentage >= 80
     ) {
 
       message =
@@ -482,23 +436,149 @@ function setupScarcityBar() {
     }
 
 
-    if (message) {
+    titleElement.textContent =
+      message;
 
-      titleElement.textContent =
-        message;
+  }
+
+
+  /* ==========================================
+     ANIMAÇÃO DA PORCENTAGEM
+  ========================================== */
+
+  let currentPercentage = 0;
+
+  const duration = 1800;
+
+  const startTime =
+    performance.now();
+
+
+  function animatePercentage(
+    timestamp
+  ) {
+
+    const elapsed =
+      timestamp - startTime;
+
+
+    const progress =
+      Math.min(
+        elapsed / duration,
+        1
+      );
+
+
+    /*
+      easing suave:
+      começa rápido e termina devagar
+    */
+
+    const eased =
+      1 -
+      Math.pow(
+        1 - progress,
+        3
+      );
+
+
+    currentPercentage =
+      Math.round(
+        targetPercentage *
+        eased
+      );
+
+
+    if (percentageElement) {
+
+      percentageElement.textContent =
+        `${currentPercentage}%`;
+
+    }
+
+
+    if (progressElement) {
+
+      progressElement.style.width =
+        `${currentPercentage}%`;
+
+    }
+
+
+    if (progress < 1) {
+
+      requestAnimationFrame(
+        animatePercentage
+      );
+
+    } else {
+
+      if (progressElement) {
+
+        progressElement.classList.add(
+          "is-active"
+        );
+
+      }
 
     }
 
   }
 
 
-  logDebug(
-    "Ocupação:",
-    percentage + "%"
-  );
+  /*
+    Só começa quando a seção
+    realmente aparece na tela
+  */
+
+  if (
+    "IntersectionObserver" in window &&
+    scarcitySection
+  ) {
+
+    const observer =
+      new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach(
+            (entry) => {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                requestAnimationFrame(
+                  animatePercentage
+                );
+
+
+                observer.disconnect();
+
+              }
+
+            }
+          );
+
+        },
+        {
+          threshold: 0.25
+        }
+      );
+
+
+    observer.observe(
+      scarcitySection
+    );
+
+  } else {
+
+    requestAnimationFrame(
+      animatePercentage
+    );
+
+  }
 
 }
-
 
 /* =========================================================
    WHATSAPP
