@@ -3068,3 +3068,110 @@ body {
   }
 
 }
+/* =========================================================
+   CTA WHATSAPP FORTE
+========================================================= */
+
+.cta-button-strong {
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+
+  min-height: 76px;
+
+  padding:
+    18px
+    30px;
+
+  border-radius: 20px;
+
+}
+
+
+/* TEXTO */
+
+.cta-button-strong .cta-main-text {
+
+  width: auto;
+
+  font-size: 19px;
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  letter-spacing: 0.025em;
+
+  color: #ffffff;
+
+  text-align: center;
+
+}
+
+
+/* ÍCONE WHATSAPP */
+
+.cta-whatsapp-icon {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 31px;
+  height: 31px;
+
+  flex-shrink: 0;
+
+  color: #ffffff;
+
+}
+
+
+.cta-whatsapp-icon svg {
+
+  width: 31px;
+  height: 31px;
+
+  display: block;
+
+  fill: currentColor;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+
+  .cta-button-strong {
+
+    min-height: 72px;
+
+    gap: 11px;
+
+  }
+
+
+  .cta-button-strong .cta-main-text {
+
+    font-size: 18px;
+
+    font-weight: 900;
+
+  }
+
+
+  .cta-whatsapp-icon,
+  .cta-whatsapp-icon svg {
+
+    width: 29px;
+    height: 29px;
+
+  }
+
+}
