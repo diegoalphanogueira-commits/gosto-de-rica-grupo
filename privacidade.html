@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Política de Privacidade | Gosto de Rica</title>
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <meta
+    name="theme-color"
+    content="#1f4d38"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <style>
+
+    .privacy-page {
+      min-height: 100vh;
+      padding:
+        50px
+        0
+        90px;
+    }
+
+    .privacy-header {
+      max-width: 760px;
+      margin:
+        0
+        auto
+        35px;
+      text-align: center;
+    }
+
+    .privacy-logo {
+      width: auto;
+      height: 58px;
+      margin:
+        0
+        auto
+        30px;
+    }
+
+    .privacy-badge {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding:
+        7px
+        13px;
+      border:
+        1px solid
+        var(--border-green);
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--green-800);
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .privacy-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(
+        38px,
+        7vw,
+        56px
+      );
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      color: var(--brown-900);
+    }
+
+    .privacy-header p {
+      margin-top: 17px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+
+    .privacy-card {
+      max-width: 850px;
+      margin-inline: auto;
+      padding:
+        45px
+        42px;
+      border:
+        1px solid
+        var(--border-soft);
+      border-radius: var(--radius-lg);
+      background: rgba(
+        255,
+        255,
+        255,
+        0.88
+      );
+      box-shadow: var(--shadow-md);
+    }
+
+    .privacy-section + .privacy-section {
+      margin-top: 36px;
+      padding-top: 36px;
+      border-top:
+        1px solid
+        var(--border-soft);
+    }
+
+    .privacy-section h2 {
+      margin-bottom: 14px;
+      font-family: var(--font-display);
+      font-size: 25px;
+      line-height: 1.25;
+      color: var(--brown-900);
+    }
+
+    .privacy-section p {
+      margin-top: 12px;
+      font-size: 14px;
+      line-height: 1.85;
+      color: var(--text-secondary);
+    }
+
+    .privacy-section ul {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .privacy-section li {
+      position: relative;
+      padding-left: 22px;
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+
+    .privacy-section li::before {
+      content: "•";
+      position: absolute;
+      left: 6px;
+      color: var(--green-700);
+      font-weight: 700;
+    }
+
+    .privacy-back {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .privacy-back a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 50px;
+      padding:
+        10px
+        22px;
+      border-radius: 15px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      background:
+        linear-gradient(
+          135deg,
+          var(--green-700),
+          var(--green-950)
+        );
+      box-shadow:
+        0 12px 30px
+        rgba(29, 73, 54, 0.18);
+    }
+
+    .privacy-date {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    @media (
+      max-width: 640px
+    ) {
+
+      .privacy-page {
+        padding:
+          30px
+          0
+          65px;
+      }
+
+      .privacy-logo {
+        height: 48px;
+      }
+
+      .privacy-card {
+        padding:
+          30px
+          20px;
+        border-radius: 24px;
+      }
+
+      .privacy-section h2 {
+        font-size: 22px;
+      }
+
+      .privacy-section p,
+      .privacy-section li {
+        font-size: 13px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <div
+    class="page-background"
+    aria-hidden="true"
+  >
+
+    <div class="background-orb background-orb-one"></div>
+
+    <div class="background-orb background-orb-two"></div>
+
+  </div>
+
+
+
+  <main class="privacy-page">
+
+
+    <div class="container">
+
+
+      <header class="privacy-header">
+
+
+        <a href="index.html">
+
+          <img
+            src="assets/logo.webp"
+            alt="Gosto de Rica"
+            class="privacy-logo"
+          >
+
+        </a>
+
+
+        <span class="privacy-badge">
+
+          Privacidade e transparência
+
+        </span>
+
+
+        <h1>
+
+          Política de Privacidade
+
+        </h1>
+
+
+        <p>
+
+          Esta página explica como informações e dados podem ser utilizados
+          durante sua navegação no site Gosto de Rica.
+
+        </p>
+
+
+      </header>
+
+
+
+      <article class="privacy-card">
+
+
+        <section class="privacy-section">
+
+          <h2>
+
+            1. Sobre esta página
+
+          </h2>
+
+          <p>
+
+            O Gosto de Rica disponibiliza uma página destinada a apresentar
+            conteúdos, achadinhos, ofertas e facilitar o acesso dos visitantes
+            ao grupo oficial no WhatsApp.
+
+          </p>
+
+          <p>
+
+            Ao utilizar este site, algumas informações técnicas poderão ser
+            processadas para melhorar a experiência de navegação, analisar o
+            desempenho da página e medir resultados de campanhas de divulgação.
+
+          </p>
+
+        </section>
+
+
+
+        <section class="privacy-section">
+
+          <h2>
+
+            2. Informações que podem ser coletadas
+
+          </h2>
+
+          <p>
+
+            Durante a utilização da página, poderão ser processadas informações
+            como:
+
+          </p>
+
+          <ul>
+
+            <li>
+              páginas acessadas e interações realizadas;
+            </li>
+
+            <li>
+              dispositivo, navegador e sistema operacional utilizados;
+            </li>
+
+            <li>
+              origem do acesso à página;
+            </li>
+
+            <li>
+              parâmetros de campanhas, como UTMs;
+            </li>
+
+            <li>
+              identificadores relacionados a anúncios, quando disponíveis;
+            </li>
+
+            <li>
+              cliques realizados nos botões de acesso ao WhatsApp.
+            </li>
+
+          </ul>
+
+          <p>
+
+            Esta landing page não solicita diretamente nome, CPF, endereço,
+            senha, cartão de crédito ou outras informações financeiras.
+
+          </p>
+
+        </section>
+
+
+
+        <section class="privacy-section">
+
+          <h2>
+
+            3. Tecnologias de análise e publicidade
+
+          </h2>
+
+          <p>
+
+            Esta página poderá utilizar ferramentas de análise, medição e
+            publicidade, incluindo tecnologias fornecidas pela Meta Platforms,
+            com o objetivo de compreender o desempenho das campanhas e das
+            interações realizadas no site.
+
+          </p>
+
+          <p>
+
+            Essas tecnologias podem utilizar cookies, identificadores e outras
+            informações técnicas disponibilizadas pelo navegador para medir
+            visitas, interações e conversões.
+
+          </p>
+
+        </section>
+
+
+
+        <section class="privacy-section">
+
+          <h2>
+
+            4. Meta Pixel
+
+          </h2>
+
+          <p>
+
+            O site poderá utilizar o Meta Pixel para registrar eventos
+            relacionados à navegação, como visita à página, visualização de
+            conteúdo e clique no botão que direciona ao grupo do WhatsApp.
+
+          </p>
+
+          <p>
+
+            Essas informações são utilizadas principalmente para mensuração de
+            campanhas, criação de relatórios de desempenho e otimização dos
+            anúncios.
+
+          </p>
+
+        </section>
+
+
+
+        <section class="privacy-section">
+
+          <h2>
+
+            5. Links externos
+
+          </h2>
+
+          <p>
+
+            Esta página contém links que podem direcionar o visitante para
+            serviços externos, incluindo WhatsApp e plataformas de comércio
+            eletrônico.
+
+          </p>
+
+          <p>
+
+            Após o redirecionamento, o tratamento de dados passa a seguir
+            também os termos e políticas de privacidade da respectiva
+            plataforma acessada.
+
+          </p>
+
+        </section>
+
+
+
+        <section class="privacy-section">
+
+          <h2>
+
+            6. Grupo do WhatsApp
+
+          </h2>
+
+          <p>
+
+            Ao clicar no botão para entrar no grupo, o visitante será
+            direcionado ao ambiente do WhatsApp.
+
+          </p>
+
+          <p>
+
+            A entrada efetiva no grupo depende da ação do próprio usuário
+            dentro da plataforma do WhatsApp e está sujeita às regras e
+            funcionalidades disponibilizadas pela plataforma.
+
+          </p>
+
+        </section>
+
+
+
+        <section class="privacy-section">
+
+          <h2>
+
+            7. Segurança
+
+          </h2>
+
+          <p>
+
+            São adotadas medidas razoáveis para manter a página segura e evitar
+            o uso indevido das informações processadas durante a navegação.
+
+          </p>
+
+          <p>
+
+            Entretanto, nenhum sistema disponível na internet pode garantir
+            segurança absoluta contra todas as possíveis ameaças.
+
+          </p>
+
+        </section>
+
+
+
+        <section class="privacy-section">
+
+          <h2>
+
+            8. Alterações nesta política
+
+          </h2>
+
+          <p>
+
+            Esta Política de Privacidade poderá ser atualizada sempre que
+            houver alterações na página, nas tecnologias utilizadas ou nas
+            formas de tratamento de informações.
+
+          </p>
+
+          <p>
+
+            A versão mais recente estará sempre disponível neste endereço.
+
+          </p>
+
+        </section>
+
+
+
+        <section class="privacy-section">
+
+          <h2>
+
+            9. Contato
+
+          </h2>
+
+          <p>
+
+            Em caso de dúvidas relacionadas à utilização desta página ou ao
+            tratamento das informações descritas nesta política, o visitante
+            poderá entrar em contato pelos canais oficiais disponibilizados
+            pelo Gosto de Rica.
+
+          </p>
+
+        </section>
+
+
+      </article>
+
+
+
+      <div class="privacy-back">
+
+        <a href="index.html">
+
+          ← Voltar para o Gosto de Rica
+
+        </a>
+
+      </div>
+
+
+
+      <p class="privacy-date">
+
+        Última atualização:
+        setembro de 2026.
+
+      </p>
+
+
+    </div>
+
+
+  </main>
+
+
+</body>
+
+</html>
