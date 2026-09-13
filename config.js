@@ -4,7 +4,7 @@ const CONFIG = {
   // =====================================================
 
   whatsappGroupUrl:
-    "https://chat.whatsapp.com/SEU_LINK_DO_GRUPO",
+    "https://chat.whatsapp.com/IoBZtTHk3UM4CmlamFUGOP",
 
 
   // =====================================================
